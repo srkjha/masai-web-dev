@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAsai Sign Up PAge</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+    <h1>MASAI</h1>
+
+    
+
+        <form class="form">
+
+        <label for="name">Full Name </label> 
+         <input id="name" type="text" placeholder="Enter your full name">
+            
+         <label for="Email">Email </label>
+         <input id="email" type="text" placeholder="Enter Email"> 
+         
+         <label for="password">Password</label>
+         <input id="password" type="password" placeholder="enter password">
+
+         <input type="submit">
+
+
+         <a href="signin.html">Log-in page</a>
+
+        </form>
+
+       
+         
+    
+
+
+
+    
+</body>
+</html>
+
+<script>  
+    var form = document.querySelector("form");
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+   
+        var data  = {
+            userName: form.name.value,
+            emailId: form.email.value,
+            passWord:form.password.value,
+        }
+        localStorage.setItem("masaiData",JSON.stringify(data));
+        
+    });

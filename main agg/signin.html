@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+</head>
+<body>
+    <h1>MASAI</h1>
+
+    <div class="masai">  
+
+        <form class="form">
+
+       
+            
+         <label for="Email">Email </label>
+         <input id="email" type="text" placeholder="Enter Email"> 
+         
+         <label for="password">Password</label>
+         <input id="password" type="password" placeholder="enter password">
+
+         <input type="submit">
+
+        </form>
+         
+    </div>
+</body>
+</html>
+
+
+
+
+<script> 
+    
+    
+  var form= document.querySelector("form");
+  var masaiData = JSON.parse(localStorage.getItem("masaiData")); //null
+
+ form.addEventListener("submit",function(event){
+     event.preventDefault();
+     var data ={
+         emailId: form.email.value,
+         passWord: form.password.value
+     }
+
+     if(masai-Data === null){
+         alert("Please Create an Account");
+     }else if(masaiData.email==data.email && masaiData.password){
+         alert("Sign in Successful");
+         localStorage.setItem("signin",JSON.stringify(masaiData))
+         window.location.href="index.html"
+     }else{
+         alert("User Does Not Exist")
+     }
+ })
+
+</script>
