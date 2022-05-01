@@ -19,16 +19,16 @@
 
 	<script>
 
-		let val = localStorage.getItem('counter') || 0
+		var val = localStorage.getItem('counter') || 0
 
-		let count = document.querySelector('#count')
-		let inc = document.querySelector('#inc')
-		let dec = document.querySelector('#dec')
+		var count = document.querySelector('#count')
+		var inc = document.querySelector('#inc')
+		var dec = document.querySelector('#dec')
 
 		count.textContent = val
 
 		inc.addEventListener('click', () => {
-			count.textContent = ++val
+			count.textContent = val++
 			localStorage.setItem('counter', val)
 		})
 
